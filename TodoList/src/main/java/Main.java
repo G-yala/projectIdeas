@@ -9,7 +9,7 @@ public class Main {
         list.remove(2);
 
         System.out.println();
-        list.print();
+        list.print("Testing1234");
     }
 
 }
