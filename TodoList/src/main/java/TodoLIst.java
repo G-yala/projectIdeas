@@ -18,6 +18,6 @@ public class TodoLIst {
     }
 
     public void remove(int number) {
-        list.remove(list.get(number));
+        list.remove(number - 1);
     }
 }
