@@ -20,4 +20,8 @@ public class TodoLIst {
     public void remove(int number) {
         list.remove(number - 1);
     }
+
+//    public String toString() {
+//        return list;
+//    }
 }
