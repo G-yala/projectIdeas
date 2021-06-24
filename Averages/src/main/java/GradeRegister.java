@@ -48,5 +48,13 @@ public class GradeRegister {
             return -1;
         }
 
+        double sum = 0;
+
+        for (int grade : grades) {
+            sum+= grade;
+        }
+
+        return (sum / grades.size());
+
     }
 }
