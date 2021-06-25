@@ -3,13 +3,16 @@ import java.util.ArrayList;
 public class GradeRegister {
 
     private ArrayList<Integer> grades;
+    private ArrayList<Integer> points;
 
     public GradeRegister() {
         this.grades = new ArrayList<>();
+        this.points = new ArrayList<>();
     }
 
     public void addGradeBasedOnPoints(int points) {
         this.grades.add(pointsToGrades(points));
+        this.points.add(points);
     }
 
     public int numberOfGrades(int grade) {
@@ -44,9 +47,9 @@ public class GradeRegister {
     }
 
     public double averageOfGrades() {
-        if (this.grades.isEmpty()) {
-            return -1;
-        }
+//        if (this.grades.isEmpty()) {
+//            return -1;
+//        }
 
         double sum = 0;
 
@@ -55,6 +58,30 @@ public class GradeRegister {
         }
 
         return (sum / grades.size());
+
+    }
+
+    public double averageOfPoints(){
+        int sum = 0;
+        double average = 0;
+
+        if (points.isEmpty()) {
+            average = -1;
+        } else {
+
+            int totalNumOfGrades = points.size();
+
+            for (int gradePoints : points) {
+
+                sum += gradePoints;
+            }
+            //gets average
+
+            average = 1.0 * sum / totalNumOfGrades;
+
+        }
+
+        return average;
 
     }
 }
